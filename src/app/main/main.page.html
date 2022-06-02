@@ -6,13 +6,9 @@
     <ion-list>
       <ion-item>
         <ion-text>
-        1. Розробити сервіс для табулювання функції відповідно до варіанту 
-        </ion-text>
-      </ion-item>
-      <ion-item>
-        <ion-text>
-        2. Розробити сервіс для розрахунку значень функції за допомогою ряду
-        відповідно до варіанту 
+          Розробити сервіс для обчислення площі загальної частини, сумарної площі,<p>
+          а також порівняння площ двох прямокутників зі сторонами, паралельними осям координат.<p>
+          Прямокутники задаються координатами протилежних вершин(можна задати координати всіх вершин або координати двох вершин та розміри).
         </ion-text>
       </ion-item>
     </ion-list>    
@@ -24,16 +20,3 @@
     </app-reactive-form>
   </ion-card>
   
-  <ion-card>
-    <ion-card-title>Вихід</ion-card-title>
-    <ion-list>
-      <ion-item *ngFor="let item of result | keyvalue">
-        <ion-label>
-          <ion-text>
-            x = {{item.key}}, y = {{item.value.toFixed(3)}}
-          </ion-text>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-card>  
-</ion-content>
