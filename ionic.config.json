@@ -1,0 +1,7 @@
+{
+  "name": "zalik",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

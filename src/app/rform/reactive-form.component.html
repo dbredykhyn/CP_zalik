@@ -1,0 +1,38 @@
+
+<form [formGroup]="reactiveForm" (ngSubmit)="OnSubmit(first.value, last.value, step.value)" (ngSubmit)="submitForm()">
+  <ion-item lines="full">
+    <ion-label position="floating">Початкове значення</ion-label>
+    <ion-input formControlName="firstV" type="text" value="{{first_num}}" #first></ion-input>
+  </ion-item>
+  <span class="error ion-padding" *ngIf="errorControl.firstV.errors?.required">
+    number is required.
+  </span>
+  <span class="error ion-padding" *ngIf="errorControl.firstV.errors?.pattern">
+    Only numerical values allowed.
+  </span>
+  <ion-item lines="full">
+    <ion-label position="floating">Кінцеве значення</ion-label>
+    <ion-input formControlName="lastV" type="text" value="{{last_num}}" #last></ion-input>
+  </ion-item>
+  <span class="error ion-padding" *ngIf="errorControl.lastV.errors?.required">
+    number is required.
+  </span>
+  <span class="error ion-padding" *ngIf="errorControl.lastV.errors?.pattern">
+    Only numerical values allowed.
+  </span>
+  <ion-item lines="full">
+    <ion-label position="floating">Крок</ion-label>
+    <ion-input formControlName="step" type="text" value="{{step_num}}" #step></ion-input>
+  </ion-item>
+  <span class="error ion-padding" *ngIf="errorControl.step.errors?.required">
+     number is required.
+  </span>
+  <span class="error ion-padding" *ngIf="errorControl.step.errors?.pattern">
+    Only numerical values allowed.
+  </span>
+  <ion-button type="submit">
+    Оримати результат
+  </ion-button>
+</form>
+      
+
